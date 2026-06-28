@@ -1,0 +1,384 @@
+event: sources
+data: [{"doc_id": "umbrella_corp_policies", "title": "umbrella_corp_policies", "chunk_id": "0"}, {"doc_id": "umbrella_corp_policies", "title": "umbrella_corp_policies", "chunk_id": "1"}, {"doc_id": "umbrella_corp_policies", "title": "umbrella_corp_policies", "chunk_id": "2"}, {"doc_id": "umbrella_corp_policies", "title": "umbrella_corp_policies", "chunk_id": "3"}]
+
+event: token
+data: {"text": "Unfortunately"}
+
+event: token
+data: {"text": ","}
+
+event: token
+data: {"text": " I"}
+
+event: token
+data: {"text": " couldn"}
+
+event: token
+data: {"text": "'t"}
+
+event: token
+data: {"text": " find"}
+
+event: token
+data: {"text": " any"}
+
+event: token
+data: {"text": " information"}
+
+event: token
+data: {"text": " about"}
+
+event: token
+data: {"text": " a"}
+
+event: token
+data: {"text": " remote"}
+
+event: token
+data: {"text": " work"}
+
+event: token
+data: {"text": " policy"}
+
+event: token
+data: {"text": " in"}
+
+event: token
+data: {"text": " the"}
+
+event: token
+data: {"text": " provided"}
+
+event: token
+data: {"text": " policy"}
+
+event: token
+data: {"text": " documents"}
+
+event: token
+data: {"text": "."}
+
+event: token
+data: {"text": " As"}
+
+event: token
+data: {"text": " a"}
+
+event: token
+data: {"text": " Field"}
+
+event: token
+data: {"text": " Intelligence"}
+
+event: token
+data: {"text": " Analyst"}
+
+event: token
+data: {"text": ","}
+
+event: token
+data: {"text": " you"}
+
+event: token
+data: {"text": " may"}
+
+event: token
+data: {"text": " want"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " check"}
+
+event: token
+data: {"text": " with"}
+
+event: token
+data: {"text": " your"}
+
+event: token
+data: {"text": " supervisor"}
+
+event: token
+data: {"text": " or"}
+
+event: token
+data: {"text": " HR"}
+
+event: token
+data: {"text": " department"}
+
+event: token
+data: {"text": " for"}
+
+event: token
+data: {"text": " more"}
+
+event: token
+data: {"text": " information"}
+
+event: token
+data: {"text": " on"}
+
+event: token
+data: {"text": " remote"}
+
+event: token
+data: {"text": " work"}
+
+event: token
+data: {"text": " arrangements"}
+
+event: token
+data: {"text": ".\n\n"}
+
+event: token
+data: {"text": "However"}
+
+event: token
+data: {"text": ","}
+
+event: token
+data: {"text": " I"}
+
+event: token
+data: {"text": " can"}
+
+event: token
+data: {"text": " suggest"}
+
+event: token
+data: {"text": " some"}
+
+event: token
+data: {"text": " possible"}
+
+event: token
+data: {"text": " contacts"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " reach"}
+
+event: token
+data: {"text": " out"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": ":\n\n"}
+
+event: token
+data: {"text": "*"}
+
+event: token
+data: {"text": " HR"}
+
+event: token
+data: {"text": " Department"}
+
+event: token
+data: {"text": ":"}
+
+event: token
+data: {"text": " They"}
+
+event: token
+data: {"text": " may"}
+
+event: token
+data: {"text": " be"}
+
+event: token
+data: {"text": " able"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " provide"}
+
+event: token
+data: {"text": " more"}
+
+event: token
+data: {"text": " information"}
+
+event: token
+data: {"text": " on"}
+
+event: token
+data: {"text": " company"}
+
+event: token
+data: {"text": " policies"}
+
+event: token
+data: {"text": " and"}
+
+event: token
+data: {"text": " procedures"}
+
+event: token
+data: {"text": " related"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " remote"}
+
+event: token
+data: {"text": " work"}
+
+event: token
+data: {"text": ".\n"}
+
+event: token
+data: {"text": "*"}
+
+event: token
+data: {"text": " Your"}
+
+event: token
+data: {"text": " Supervisor"}
+
+event: token
+data: {"text": ":"}
+
+event: token
+data: {"text": " As"}
+
+event: token
+data: {"text": " your"}
+
+event: token
+data: {"text": " direct"}
+
+event: token
+data: {"text": " manager"}
+
+event: token
+data: {"text": ","}
+
+event: token
+data: {"text": " they"}
+
+event: token
+data: {"text": " may"}
+
+event: token
+data: {"text": " be"}
+
+event: token
+data: {"text": " able"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " provide"}
+
+event: token
+data: {"text": " guidance"}
+
+event: token
+data: {"text": " on"}
+
+event: token
+data: {"text": " remote"}
+
+event: token
+data: {"text": " work"}
+
+event: token
+data: {"text": " arrangements"}
+
+event: token
+data: {"text": " and"}
+
+event: token
+data: {"text": " any"}
+
+event: token
+data: {"text": " specific"}
+
+event: token
+data: {"text": " requirements"}
+
+event: token
+data: {"text": " or"}
+
+event: token
+data: {"text": " protocols"}
+
+event: token
+data: {"text": " that"}
+
+event: token
+data: {"text": " need"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " be"}
+
+event: token
+data: {"text": " followed"}
+
+event: token
+data: {"text": ".\n\n"}
+
+event: token
+data: {"text": "Please"}
+
+event: token
+data: {"text": " let"}
+
+event: token
+data: {"text": " me"}
+
+event: token
+data: {"text": " know"}
+
+event: token
+data: {"text": " if"}
+
+event: token
+data: {"text": " there"}
+
+event: token
+data: {"text": "'s"}
+
+event: token
+data: {"text": " anything"}
+
+event: token
+data: {"text": " else"}
+
+event: token
+data: {"text": " I"}
+
+event: token
+data: {"text": " can"}
+
+event: token
+data: {"text": " help"}
+
+event: token
+data: {"text": " you"}
+
+event: token
+data: {"text": " with"}
+
+event: token
+data: {"text": "!"}
+
+event: done
+data: {"conversation_id": "cba6c8b2-b620-4d38-bedb-12a02ae12618", "message_id": "04e104e1-6d2f-4ffe-8152-bab0129217a5"}
+

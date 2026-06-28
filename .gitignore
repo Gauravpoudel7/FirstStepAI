@@ -1,1 +1,8 @@
 .env
+.venv/
+__pycache__/
+*.pyc
+
+# Runtime-generated data — never commit user PII or feedback
+data/users.json
+data/feedback.json

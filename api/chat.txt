@@ -1,0 +1,291 @@
+event: sources
+data: [{"doc_id": "Pizza Fridge Policy", "title": "Pizza Fridge Policy", "chunk_id": "0"}, {"doc_id": "Smoke Test Policy", "title": "Smoke Test Policy", "chunk_id": "1"}, {"doc_id": "ronaldo", "title": "ronaldo", "chunk_id": "2"}, {"doc_id": "aaa", "title": "aaa", "chunk_id": "3"}]
+
+event: token
+data: {"text": "**"}
+
+event: token
+data: {"text": "Company"}
+
+event: token
+data: {"text": " F"}
+
+event: token
+data: {"text": "ridge"}
+
+event: token
+data: {"text": " Policy"}
+
+event: token
+data: {"text": "**\n"}
+
+event: token
+data: {"text": "================"}
+
+event: token
+data: {"text": "=========="}
+
+event: token
+data: {"text": "\n\n"}
+
+event: token
+data: {"text": "According"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " our"}
+
+event: token
+data: {"text": " company"}
+
+event: token
+data: {"text": " policies"}
+
+event: token
+data: {"text": ","}
+
+event: token
+data: {"text": " the"}
+
+event: token
+data: {"text": " fridge"}
+
+event: token
+data: {"text": " on"}
+
+event: token
+data: {"text": " floor"}
+
+event: token
+data: {"text": " "}
+
+event: token
+data: {"text": "3"}
+
+event: token
+data: {"text": " is"}
+
+event: token
+data: {"text": " officially"}
+
+event: token
+data: {"text": " reserved"}
+
+event: token
+data: {"text": " for"}
+
+event: token
+data: {"text": " **"}
+
+event: token
+data: {"text": "left"}
+
+event: token
+data: {"text": "over"}
+
+event: token
+data: {"text": " pizza"}
+
+event: token
+data: {"text": " only"}
+
+event: token
+data: {"text": "**"}
+
+event: token
+data: {"text": "."}
+
+event: token
+data: {"text": " Any"}
+
+event: token
+data: {"text": " non"}
+
+event: token
+data: {"text": "-p"}
+
+event: token
+data: {"text": "izza"}
+
+event: token
+data: {"text": " items"}
+
+event: token
+data: {"text": " stored"}
+
+event: token
+data: {"text": " in"}
+
+event: token
+data: {"text": " the"}
+
+event: token
+data: {"text": " fridge"}
+
+event: token
+data: {"text": " will"}
+
+event: token
+data: {"text": " be"}
+
+event: token
+data: {"text": " removed"}
+
+event: token
+data: {"text": " by"}
+
+event: token
+data: {"text": " the"}
+
+event: token
+data: {"text": " facilities"}
+
+event: token
+data: {"text": " team"}
+
+event: token
+data: {"text": " on"}
+
+event: token
+data: {"text": " Fridays"}
+
+event: token
+data: {"text": ".\n\n"}
+
+event: token
+data: {"text": "**"}
+
+event: token
+data: {"text": "Source"}
+
+event: token
+data: {"text": ":**"}
+
+event: token
+data: {"text": " Company"}
+
+event: token
+data: {"text": " Policy"}
+
+event: token
+data: {"text": ","}
+
+event: token
+data: {"text": " Section"}
+
+event: token
+data: {"text": ":"}
+
+event: token
+data: {"text": " F"}
+
+event: token
+data: {"text": "ridge"}
+
+event: token
+data: {"text": " Et"}
+
+event: token
+data: {"text": "iqu"}
+
+event: token
+data: {"text": "ette"}
+
+event: token
+data: {"text": ","}
+
+event: token
+data: {"text": " Effective"}
+
+event: token
+data: {"text": " Date"}
+
+event: token
+data: {"text": ":"}
+
+event: token
+data: {"text": " ["}
+
+event: token
+data: {"text": "Insert"}
+
+event: token
+data: {"text": " Date"}
+
+event: token
+data: {"text": "]\n\n"}
+
+event: token
+data: {"text": "Please"}
+
+event: token
+data: {"text": " note"}
+
+event: token
+data: {"text": " that"}
+
+event: token
+data: {"text": " the"}
+
+event: token
+data: {"text": " microwave"}
+
+event: token
+data: {"text": " next"}
+
+event: token
+data: {"text": " to"}
+
+event: token
+data: {"text": " the"}
+
+event: token
+data: {"text": " fridge"}
+
+event: token
+data: {"text": " is"}
+
+event: token
+data: {"text": " exclusively"}
+
+event: token
+data: {"text": " for"}
+
+event: token
+data: {"text": " rehe"}
+
+event: token
+data: {"text": "ating"}
+
+event: token
+data: {"text": " pizza"}
+
+event: token
+data: {"text": " slices"}
+
+event: token
+data: {"text": " at"}
+
+event: token
+data: {"text": " "}
+
+event: token
+data: {"text": "30"}
+
+event: token
+data: {"text": " seconds"}
+
+event: token
+data: {"text": " on"}
+
+event: token
+data: {"text": " high"}
+
+event: token
+data: {"text": "."}
+
+event: done
+data: {"conversation_id": "a488c33c-3dba-47ed-b7bf-9e964e069db3", "message_id": "3699c26d-1432-49e2-8e5c-806815acfb62"}
+

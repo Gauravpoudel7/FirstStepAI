@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: firststepai-api
+Version: 0.1.0
+Summary: FirstStep AI — FastAPI backend (LangChain + Groq + Chroma + PostgreSQL)
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: uvicorn[standard]>=0.30.0
+Requires-Dist: pydantic>=2.8
+Requires-Dist: pydantic-settings>=2.4
+Requires-Dist: sqlalchemy>=2.0.30
+Requires-Dist: alembic>=1.13.0
+Requires-Dist: psycopg[binary]>=3.2.0
+Requires-Dist: asyncpg>=0.29.0
+Requires-Dist: passlib[bcrypt]>=1.7.4
+Requires-Dist: bcrypt>=4.2.0
+Requires-Dist: python-jose[cryptography]>=3.3.0
+Requires-Dist: python-multipart>=0.0.9
+Requires-Dist: itsdangerous>=2.2
+Requires-Dist: redis>=5.0.0
+Requires-Dist: email-validator>=2.2.0
+Requires-Dist: langchain==0.3.14
+Requires-Dist: langchain-community==0.3.14
+Requires-Dist: langchain-huggingface>=0.1.0
+Requires-Dist: langchain-chroma==0.2.0
+Requires-Dist: langchain-groq>=0.2.0
+Requires-Dist: chromadb==0.5.23
+Requires-Dist: pypdf==5.0.1
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: Faker==30.0.0
+Requires-Dist: tenacity>=8.2.0
+Requires-Dist: httpx>=0.27.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0.0; extra == "dev"
+Requires-Dist: ruff>=0.5.0; extra == "dev"
+Requires-Dist: mypy>=1.10.0; extra == "dev"

@@ -1,71 +1,95 @@
-from data.employees import generate_employee_data
+"""FirstStepAI — Enterprise AI Assistant entrypoint.
+
+Orchestrates the boot sequence:
+  1. Load settings + setup logging.
+  2. Seed the demo user database (first run only).
+  3. Bootstrap session from any remember-me token in the URL.
+  4. Inject CSS + render either login page or the authenticated app shell.
+"""
+from __future__ import annotations
+
 from dotenv import load_dotenv
-import streamlit as st
-from langchain_community.document_loaders import PyPDFLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
-from langchain_chroma import Chroma
-import logging
-from assistant import Assistant
-from prompts import SYSTEM_PROMPT, WELCOME_MESSAGE
-from langchain_groq import ChatGroq
-from gui import AssistantGUI
+
+load_dotenv()
+
+import logging  # noqa: E402
+
+import streamlit as st  # noqa: E402
+
+from auth.models import Role  # noqa: E402
+from config.settings import get_settings  # noqa: E402
+from core.session import get_session  # noqa: E402
+from data.employees import seed_user_database  # noqa: E402
+from ui.components import render_sidebar_nav, render_top_nav  # noqa: E402
+from ui.pages.admin import render_admin  # noqa: E402
+from ui.pages.chat import render_chat  # noqa: E402
+from ui.pages.dashboard import render_dashboard  # noqa: E402
+from ui.pages.knowledge_base import render_knowledge_base  # noqa: E402
+from ui.pages.login import render_login_page  # noqa: E402
+from ui.pages.profile import render_profile  # noqa: E402
+from ui.theme import inject_css  # noqa: E402
+from utils.logging import setup_logging  # noqa: E402
 
 
-if __name__ == "__main__":
+setup_logging()
+log = logging.getLogger("firststepai")
 
-    load_dotenv()
+# First-run setup: seed demo users + ensure vector store is built.
+try:
+    seeded = seed_user_database()
+    if seeded:
+        log.info("Seeded %s demo user(s).", seeded)
+except Exception as e:  # noqa: BLE001
+    log.exception("Failed to seed users: %s", e)
 
-    logging.basicConfig(level=logging.INFO)
+try:
+    from rag.ingest import ensure_indexed
+    if ensure_indexed():
+        log.info("Vector store ready.")
+    else:
+        log.warning("Vector store not built (no PDF found).")
+except Exception as e:  # noqa: BLE001
+    log.exception("Vector store init failed: %s", e)
 
-    st.set_page_config(page_title="FirstStepAI", page_icon="⛅", layout="wide")
 
-    @st.cache_data(ttl=3600, show_spinner="Loading Employee Data...")
-    def get_user_data():
-        return generate_employee_data(1)[0]
+settings = get_settings()
+st.set_page_config(
+    page_title=f"{settings.COMPANY_NAME} · AI Assistant",
+    page_icon=settings.COMPANY_FAVICON,
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
-    @st.cache_resource(ttl=3600, show_spinner="Loading Vector Store...")
-    def init_vector_store(pdf_path):
-        try:
-            loader = PyPDFLoader(pdf_path)
-            docs = loader.load()
-            text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size=2000, chunk_overlap=200
-            )
-            splits = text_splitter.split_documents(docs)
 
-            embedding_function = OpenAIEmbeddings()
-            persistent_path = "./data/vectorstore"
+# ---------- bootstrap session ----------
 
-            vectorstore = Chroma.from_documents(
-                documents=splits,
-                embedding=embedding_function,
-                persist_directory=persistent_path,
-            )
+session = get_session()
+session.bootstrap_from_query_params()
 
-            return vectorstore
-        except Exception as e:
-            logging.error(f"Error initializing vector store: {str(e)}")
-            st.error(f"Failed to initialize vector store: {str(e)}")
-            return None
 
-    customer_data = get_user_data()
-    vector_store = init_vector_store("data/umbrella_corp_policies.pdf")
+# ---------- render ----------
 
-    if "customer" not in st.session_state:
-        st.session_state.customer = customer_data
-    if "messages" not in st.session_state:
-        st.session_state.messages = [{"role": "ai", "content": WELCOME_MESSAGE}]
+if not session.is_authenticated():
+    render_login_page()
+    st.stop()
 
-    llm = ChatGroq(model="llama-3.1-8b-instant")
+user = session.current_user()
+assert user is not None
 
-    assistant = Assistant(
-        system_prompt=SYSTEM_PROMPT,
-        llm=llm,
-        message_history=st.session_state.messages,
-        employee_information=st.session_state.customer,
-        vector_store=vector_store,
-    )
-    
-    gui = AssistantGUI(assistant)
-    gui.render()
+inject_css()
+page = render_sidebar_nav(user)
+render_top_nav(user, page)
+
+
+RENDERERS = {
+    "Dashboard": render_dashboard,
+    "Chat": render_chat,
+    "Knowledge Base": render_knowledge_base,
+    "My Profile": render_profile,
+    "Admin": render_admin,
+}
+
+try:
+    RENDERERS[page](user)
+except KeyError:
+    render_dashboard(user)
